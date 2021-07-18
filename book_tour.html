@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Book a Tour !</title>
+		<meta charset='utf-8' />
+	</head> 
+	<style>
+		body {
+			background-color: #669999;
+			}
+	</style>
+	<body>
+		<header align='center'>
+			<h1><em>Book a Trip</em></h1>
+		</header>
+		<div align='center'>
+				<form method='POST' action="success.html">
+		        <fieldset style="width:350px;">
+		            <legend>Form</legend>
+			        <label>Name: </label><input name='name' type='text' placeholder="Full name" autofocus required autocomplete="on" /><br /><br />
+			        <lablel>Email: </label><input name='email' type='text' placeholder='email' required /><br /><br />
+			        <lablel>Phone: </lable><input name='phone' type='text' placeholder='phone' required/><br /><br />
+				<label>Visiting Preference: </label><input type="text" list="preference" />
+				<datalist id="preference">
+			        <option value="Trivandrum" />
+			        <option value="Kochi" />
+			        </datalist><br/ ><br />
+			        <label>Date of visit: </label><input type="datetime-local" name="date" /><br /><br />
+    <!-- Data list --> 			    
+			        <label>Comments: </label><textarea name='comment'></textarea><br /><br />
+			        <input type='submit' name='submit' value='submit' />
+			        <input type='reset' value='clear' name='clear' />
+			    </fieldset>
+		    </form>
+		</div>
+    </body
+    </html>
