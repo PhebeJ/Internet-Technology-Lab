@@ -1,0 +1,29 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Event Handling</title>
+		<meta charset="utf-8">
+	</head>
+	<body onload="document.getElementById('body_load').innerHTML='Document loaded'" onkeydown="document.body.style.background='green'">
+		<span id="body_load"></span><br /><br />
+		<button id="hi_button" onclick="document.getElementById('hi_out').innerHTML='Hi'"> Hi ! </button>&nbsp;&nbsp;
+		<span id="hi_out"></span>
+		<br /><br />
+		<button id=="click_button" onclick="this.innerHTML='niceee'"> Click Me </button>	
+		<br /><br />
+		<span onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">Hover over meee...</span>
+		<br /><br />
+		<p>Select your favorite Friends Character from the list below</p>
+	
+		<select onchange="document.getElementById('select_out').innerHTML='You selected '+this.value;">
+			<option>Phoebe</option>
+			<option>Rachel</option>
+			<option>Monica</option>
+			<option>Ross</option>
+      <option>Chandler</option>
+      <option>Joey</option>
+			<option>Sorry I'm not a Friends Fan :(</option>
+		</select>
+		<p id="select_out"></p>
+	</body>
+</html>
