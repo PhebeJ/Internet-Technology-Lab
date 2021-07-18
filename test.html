@@ -1,0 +1,153 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Num computation</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+	<script>
+		function prime(){
+			var a=document.getElementById("prime").value;
+			flag=1;
+			for(var i=2;i<=a/2;i++)
+				{
+					if(a%i==0){
+						document.getElementById("prime_out").innerHTML=" Its not Prime !";
+						flag=0;
+						break;
+					}
+				}
+				if(flag){
+					document.getElementById("prime_out").innerHTML=" Its Prime !";
+				}
+				if(a==1 || a==0){
+					document.getElementById("prime_out").innerHTML=" Its not Prime !";
+				}
+		}	
+		function palindrome(){
+			var a=document.getElementById("palindrome").value;
+			var copy=a;
+			var sum=0;
+			while(copy>0){
+				sum=sum*10+(copy%10);
+				copy=parseInt(copy/10);
+			}
+			if(sum==a){
+				document.getElementById("palindrome_out").innerHTML=" Its Palindrome !";
+			}
+			else{
+				document.getElementById("palindrome_out").innerHTML=" Its not palindrome !";
+			}
+		}
+		function armstrong(){
+			var a=document.getElementById("armstrong").value;		
+			var copy=a;
+			var sum=0;
+			var l=a.toString().length;
+			while(copy>0){
+					sum=sum+(Math.pow((copy%10),l));
+					copy=parseInt(copy/10);
+			}
+			if(sum==a){
+				document.getElementById("armstrong_out").innerHTML=" Its Armstrong !";
+			}
+			else{
+				document.getElementById("armstrong_out").innerHTML=" Its not Armstrong !";
+			}
+		}
+		function neon(){
+			var a=document.getElementById("neon").value;		
+			var sum=0;
+			var copy=a*a;
+			while(copy>0){
+				sum=sum+(copy%10);
+				copy=parseInt(copy/10);
+			}
+			if(sum==a){
+				document.getElementById("neon_out").innerHTML=" Its Neon !";
+			}
+			else{
+				document.getElementById("neon_out").innerHTML=" Its not Neon !";
+			}
+		}	
+		function all_func(){
+			var a=document.getElementById("all").value;
+			document.getElementById("prime").value=a;
+			document.getElementById("palindrome").value=a;
+			document.getElementById("armstrong").value=a;
+			document.getElementById("neon").value=a;
+			
+			prime();
+			palindrome();
+			armstrong();
+			neon();
+		}
+		
+	</script>
+		<div align='center'>
+			<div style="border-style: solid;border-width: thin;width:200px">
+				<p style="font-family:Tahoma;width:auto;color:red;height:auto;font-weight:bold">Num compilation</p>
+			</div>
+		<br /><br />
+		<table style="border-style: solid;border-width: thin;width:800px;">
+			<tr style="border-style: solid;border-width: thin;">
+				<td style="border-style: solid;border-width: thin;text-align:center;border-top:hidden;border-left:hidden;">Description</td>
+				<td style="border-style: solid;border-width: thin;text-align:center;border-top:hidden;border-right:hidden;">Computation</td>
+			</tr style="border-style: solid;border-width: thin;">
+			<tr>
+				<td style="border-style: solid;border-width: thin;border-top:hidden;border-left:hidden;border-bottom:hidden;text-align:center;">
+					<details>
+							<summary>Prime</summary>
+							<mark>A number which has no factors other than 1 and the number itself</mark>.
+					</details>
+				</td>
+				<td style="border-style: solid;border-width: thin;border-top:hidden;border-right:hidden;border-bottom:hidden;padding-left:150px;">
+					<input type='text' id='prime'>
+					<button id="prime_button" onclick="return prime()">Prime</button><span id="prime_out"></span>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-style: solid;border-width: thin;border-top:hidden;border-left:hidden;border-bottom:hidden;text-align:center;">
+					<details>
+							<summary>Palindrome</summary>
+								<mark>A number, whose reverse is also equal to the number.</mark>
+					</details>
+				</td>
+				<td style="border-style: solid;border-width: thin;border-top:hidden;border-right:hidden;border-bottom:hidden;padding-left:150px;">
+					<input type='text' id='palindrome'>
+					<button id="palindrome_button" onclick="return palindrome()">Palindrome</button><span id="palindrome_out"></span>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-style: solid;border-width: thin;border-top:hidden;border-left:hidden;border-bottom:hidden;text-align:center;">
+					<details>
+							<summary>Armstrong</summary>
+								<mark>A number, whose sum of cubes of its digits is equal to the number.</mark>
+					</details>
+				</td>
+				<td style="border-style: solid;border-width: thin;border-top:hidden;border-right:hidden;border-bottom:hidden;padding-left:150px;">
+					<input type='text' id='armstrong'>
+					<button id="armstrong_button" onclick="return armstrong()">Armstrong</button><span id="armstrong_out"></span>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-style: solid;border-width: thin;border-top:hidden;border-left:hidden;border-bottom:hidden;text-align:center;">
+					<details>
+							<summary>Neon</summary>
+								<mark>A number, whose sum of the digits of its squared number, is equal to the number.</mark> 
+					</details>
+				</td>
+				<td style="border-style: solid;border-width: thin;border-top:hidden;border-right:hidden;border-bottom:hidden;padding-left:150px;">
+					<input type='text' id='neon'>
+					<button id="neon_button" onclick="return neon()">Neon</button><span id="neon_out"></span>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td style="border-style: solid;border-width: thin;border-top:hidden;border-right:hidden;border-bottom:hidden;padding-left:150px;">
+					<input type='text' id='all'>
+					<button id="neon_button" onclick="return all_func()">Check All</button><span id="all_out"></span>
+				</td>
+			</tr>
+	</body>
+</html>
