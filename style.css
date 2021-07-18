@@ -1,0 +1,21 @@
+p {
+  	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+}
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+
+ol {
+  list-style-type: upper-roman;
+}
