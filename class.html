@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Phebe</title>
+		<meta charset="utf-8">
+<!-- MIME - Multipurpose Internet Mail Extention -->
+		<style type="text/css">					 
+			h1 { color:deepskyblue; font-size:50px; }
+			.lorem { color:powderblue; }
+		</style>
+	</head>
+	<body>
+	    <header align='center'>
+	        <h1>My Webpage</h1>
+	        <time style="color:red;">06/02/2019</time><br /><br />
+	        <a href='#1'>Text</a> | <a href='#2'>olist</a> | <a href='#3'>ulist</a> | <a href='#4'>Table</a> | <a href='#5'>Form</a><br /><br />
+	        0 <meter color="black" min='0' max='100' value='60'></meter>100
+	    </header>
+		<div align="center">
+			<img src="images/puppy.jpg" width="600px" />
+		</div>         
+		<br />
+		<section id='1'>
+		<h3>Text</h3>
+		<details>
+		   <summary>Lorem Ipsum</summary>
+		<p align='justify' class="lorem">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLorem ipsum dolor sit amet, cu minim facete reprehendunt duo, cum vocent voluptua ut. Ei vis modo wisi postulant. Dicit principes eloquentiam ex has, nec at mazim diceret repudiandae. Ex mei quaeque recusabo, ullum posidonium duo at.
+    <mark>Qui duis libris te, soluta tractatos ei eum. Everti menandri adversarium ea vel, congue graecis incorrupte nam ut. Ignota similique ei his, cum at doctus audiam. At reque congue per. Mutat nostro inciderint mel eu, stet putent eu quo.</mark>
+    In magna commune reformidans sit. Nec at dicat meliore, lucilius tacimates id usu, nec et tantas mollis indoctum. In sea tota saepe incorrupte, sea in facete recteque vituperata, duo eu mutat inermis. Affert tantas suscipiantur te pri, modus errem eam cu, dicam luptatum duo ex. An qui dolorem scriptorem.
+    Novum offendit omittantur his te, mucius regione efficiendi has et. Pri suscipit democritum ei, id dictas dissentiunt mea. No clita doctus adipisci usu. In duo quando meliore neglegentur.
+    Ne sed assum postulant. Eum quaeque erroribus in, legendos maluisset disputando qui et. Est ut partem tibique, ei graecis definitiones vix. Pri elit electram voluptatum ex. Malorum aliquid sanctus eum et. Reque laudem nam an, et vidit prima aeterno quo, iudicabit adolescens temporibus et nec.
+            </p>
+        </details>
+        </section>
+        <section id='2'>
+		    <h3>Ordered list</h3>
+		    <ol>
+			    <li>item 1</li>
+			    <li>item 2</li>
+			    <li>item 3</li>			
+		    </ol>	
+		</section>
+		<h3>Unordered list</h3>
+		<section id='3'>
+		    <ul>
+			    <li>item 1</li>
+			    <li>item 2</li>
+			    <li>item 3</li>			
+		    </ul>
+		</section>
+		<section id='4'>
+		    <h3>Table</h3>
+		    <table border=1>
+			    <thead>
+				    <tr>
+					    <td><strong>Col 1</strong></td>
+					    <td><strong>Col 2</strong></td>
+					    <td><strong>Col 3</strong></td>
+				    <tr>
+			    </thead>
+			    <tr>
+					    <td>Row 1 Col 1</td>
+					    <td>Row 1 Col 2</td>
+					    <td>Row 1 Col 3</td>
+			    <tr>
+			    <tr>
+					    <td>Row 2 Col 1</td>
+					    <td>Row 2 Col 2</td>
+					    <td>Row 2 Col 3</td>
+			    <tr>	
+		    </table>
+		</section>
+		<section id='5'>
+		    <h3>Sign up</h3>
+		    <form method='POST' action="a.php">
+		        <fieldset style="width:40px;">
+		            <legend>Form</legend>
+			        <label>Name: </label><input name='name' type='text' placeholder="Full name" autofocus required autocomplete="on" /><br /><br />
+			        <lablel>Email: </label><input name='email' type='text' placeholder='email' required /><br /><br />
+			        <label>Password: </label><input name='password' type='password' placeholder='password' required /><br /><br />
+			        <lablel>Gender: </lable><input name='gender' value='male' type='radio' checked />Male
+			        <input name='gender' value='female' type='radio' />Female<br /><br />
+			        <label>Year: </label>
+			        <select name='Year'>
+				        <option value='1'>1st Year</option>
+				        <option value='2'>2nd Year</option>
+				        <option value='3'>3rd Year</option>
+				        <option value='4'>4th Year</option>
+			        </select><br/ ><br />
+			        <label>Date-Time: </label><input type="datetime-local" name="date" />
+    <!-- Data list --> 			    
+			        <label>Data list: </label><input type="text" list="month" />
+			        <datalist id="month">
+			        <option value="Jan" />
+			        <option value="Feb" />
+			        </datalist>
+			        <label>Review: </legend><input type='range' min=1 max=100 step=10 required /><br />
+			        <label>Comments: </label><textarea name='comment'></textarea><br /><br />
+			        <input type='submit' name='submit' value='submit' />
+			        <input type='reset' value='clear' name='clear' />
+			    </fieldset>
+		    </form>
+		</section>
+        <footer align='center'>This website is the property of PJ Inc&copy. All rights reserved&reg.</footer>
+	</body>
+</html>
