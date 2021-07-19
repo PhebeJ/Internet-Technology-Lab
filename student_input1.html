@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Student details</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="hide.js"></script>
+	</head>
+	<body>
+		<h1 align='center'>Faculty Admin Panel</h1>
+		<div align='center'>
+			<button onclick="unhide(1)" >Input</button>
+			<button onclick="unhide(2)" >Search</button>
+			<button onclick="unhide(3)" >Delete</button>
+			<button onclick="unhide(4)" >All</button>
+		</div>
+		<br>
+		<div>
+			<div id="student_input" align='center' >
+				<fieldset style="width:200px">
+					<legend>Student details</legend>
+					<form name="student_input" method="post" action="student_input.php" >
+						<label>Name: </label><input type="text" name='name' autofocus required /><br /><br />
+						<label>Roll no: </label><input type="text" name='rollno' required/><br /><br />
+						<label>Gender: </label><input type="text" name='gender' required/><br /><br />
+						<label>Branch: </label><input type="text" name='branch' required/><br /><br />
+						<label>Email: </label><input type="email" name='email' required/><br /><br />
+						<textarea name='address' rows="5" cols="30" required placeholder="Address"></textarea><br />
+						<input type="submit" name='submit' value="Register" />
+					</form>
+				</fieldset>
+			</div>
+			<div id="student_search" align='center' hidden>
+				<fieldset style="width:200px">
+					<legend>Student Search</legend>
+					<form name="my_form2" method="post" action="student_search.php" >
+						<label>Roll no: </label><input type="text" name='rollno' required/><br /><br />
+						<input type="submit" name='submit' value="Search" />
+					</form>
+				</fieldset>
+			</div>
+		</div>
+		<div id="student_delete" align='center' hidden>
+			<fieldset style="width:200px">
+				<legend>Student Delete</legend>
+				<form name="my_form2" method="post" action="student_delete.php" onsubmit="alert('Are you sure ?')" >
+					<label>Roll no: </label><input type="text" name='rollno' required/><br /><br />
+					<input type="submit" name='submit' value="Delete" />
+				</form>
+			</fieldset>
+		</div>
+		<div id="student_all" align='center' hidden>
+			<fieldset style="width:200px">
+				<legend>Display details of all students</legend>
+				<form name="my_form2" method="post" action="student_all.php" >
+					<input type="submit" name='submit' value="Cick Here" />
+				</form>
+			</fieldset>
+		</div>
+	</div>
+  </body>
+</html>
